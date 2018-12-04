@@ -7,201 +7,201 @@
  *   underscore, misalnya: epsilonu, PR, PK, dan sebagainya.
  */
 
-var			epsilonu		//Intertemporal shock 
-			epsilonh
-			epsilonr
-			epsilonrho
-			epsilonR		//Housing preference
-			epsilonL		//Labour preference
-			epsilon_D
-			epsilon_IR
-			epsilon_E
-			epsilon_IC
-			psiut
-			r
-			rstar			//Suku bunga luar negeri
-			taustar			//Pajak atas aliran modal masuk  
-			r_D				//Suku bunga deposito
-			r_K				//Suku bunga kapital 
-			P				//Harga final 
-			Pstar
-			Bstar			//Pinjaman luar negeri
-			Btotstar
-			BGstar
-			A
-			C
-			D				//Total deposito 
-			E
-			UCaksen
-			PR				//Harga rumah
-			PK				//Harga barang kapital 
-			pi				//Inflasi
-			piR
-			pistar			//Inflasi luar negeri
-			rho				//Premi risiko
-			s				//Nilai tukar riil 
-			e				//Nilai tukar nominal 
-			y
-			y_E
-			ystar
-			ytilde
-			eta
-			etastar
-			mu
-			Gamma
-			B
-			BPstar
-			BEstar
-			G
-			B_E
-			upsilon
-			upsilonB
-			lambdaP
-			R_D
-			R_B
-			
+var				epsilonu		//Intertemporal shock 
+				epsilonh
+				epsilonr
+				epsilonrho
+				epsilonR		//Housing preference
+				epsilonL		//Labour preference
+				epsilon_D
+				epsilon_IR
+				epsilon_E
+				epsilon_IC
+				psiut
+				r
+				rstar			//Suku bunga luar negeri
+				taustar			//Pajak atas aliran modal masuk  
+				r_D			//Suku bunga deposito
+				r_K			//Suku bunga kapital 
+				P			//Harga final 
+				Pstar
+				Bstar			//Pinjaman luar negeri
+				Btotstar
+				BGstar
+				A
+				C
+				D			//Total deposito 
+				E
+				UCaksen
+				PR			//Harga rumah
+				PK			//Harga barang kapital 
+				pi			//Inflasi
+				piR
+				pistar			//Inflasi luar negeri
+				rho			//Premi risiko
+				s			//Nilai tukar riil 
+				e			//Nilai tukar nominal 
+				y
+				y_E
+				ystar
+				ytilde
+				eta
+				etastar
+				mu
+				Gamma
+				B
+				BPstar
+				BEstar
+				G
+				B_E
+				upsilon
+				upsilonB
+				lambdaP
+				R_D
+				R_B
+				
 
 
-			/* Variabel spesifik PATIENT HOUSEHOLD */			
-			C_P				//Tingkat konsumsi pada Patient Household
-			R_P				//Kepemilikan asset perumahan pada Patient Household
-			T_P				//Pajak yang dikeluarkan Patient Household 						
-			K_P				//Kapital pada Patient Household
-			BG_P			//Obligasi pemerintah pada Patient Household
-			Pi_P			//Total dividen pada Patient Household
-			W_P				//Pendapatan dari tenaga kerja pada Patient Household
-			L_P				//Jumlah jam bekerja pada Patient Household
-			XP
-			YP
-			piWP
+				/* Variabel spesifik PATIENT HOUSEHOLD */			
+				C_P			//Tingkat konsumsi pada Patient Household
+				R_P			//Kepemilikan asset perumahan pada Patient Household
+				T_P			//Pajak yang dikeluarkan Patient Household 						
+				K_P			//Kapital pada Patient Household
+				BG_P			//Obligasi pemerintah pada Patient Household
+				Pi_P			//Total dividen pada Patient Household
+				W_P			//Pendapatan dari tenaga kerja pada Patient Household
+				L_P			//Jumlah jam bekerja pada Patient Household
+				XP
+				YP
+				piWP
 
-			/* Variabel spesifik IMPATIENT HOUSEHOLD */			
-			C_I				//Tingkat konsumsi pada Impatient Household
-			R_I				//Kepemilikan asset perumahan pada Impatient Household
-			T_I				//Pajak yang dikeluarkan Impatient Household 
-			W_I				//Pendapatan dari tenaga kerja pada Impatient Household
-			L_I				//Jumlah jam bekerja pada Impatient Household
-			B_IC
-			B_IR
-			m_I
-			r_IR
-			r_IC
-			b_IC
-			piWI
-			XI
-			YI
-			
-			/* Variabel spesifik ENTREPENEURS */			
-			C_E				//Tingkat konsumsi pada Entrepeneurs
-			P_E
-			K_E
-			r_E
-			m_E
-			
-			/* Variabel spesifik DOMESTIC RETAILERS */			
-			yH
-			piH
-			XH
-			YH
-			PH
-			Pi_H
+				/* Variabel spesifik IMPATIENT HOUSEHOLD */			
+				C_I			//Tingkat konsumsi pada Impatient Household
+				R_I			//Kepemilikan asset perumahan pada Impatient Household
+				T_I			//Pajak yang dikeluarkan Impatient Household 
+				W_I			//Pendapatan dari tenaga kerja pada Impatient Household
+				L_I			//Jumlah jam bekerja pada Impatient Household
+				B_IC
+				B_IR
+				m_I
+				r_IR
+				r_IC
+				b_IC
+				piWI
+				XI
+				YI
+				
+				/* Variabel spesifik ENTREPENEURS */			
+				C_E			//Tingkat konsumsi pada Entrepeneurs
+				P_E
+				K_E
+				r_E
+				m_E
+				
+				/* Variabel spesifik DOMESTIC RETAILERS */			
+				yH
+				piH
+				XH
+				YH
+				PH
+				Pi_H
 
-			/* Variabel spesifik IMPORTIR RETAILERS */			
-			yF			
-			piF
-			XF
-			YF
-			PF
-			PFstar
-			Pi_F
-			
-			/* Variabel spesifik EXPORTING RETAILERS */			
-			yHstar
-			piHstar
-			XHstar
-			YHstar
-			PHstar
-			Pi_Hstar
-			
-			/* Variabel spesifik CAPITAL GOODS PRODUCERS */
-			K
-			epsiloniK
-			iK
+				/* Variabel spesifik IMPORTIR RETAILERS */			
+				yF			
+				piF
+				XF
+				YF
+				PF
+				PFstar
+				Pi_F
+				
+				/* Variabel spesifik EXPORTING RETAILERS */			
+				yHstar
+				piHstar
+				XHstar
+				YHstar
+				PHstar
+				Pi_Hstar
+				
+				/* Variabel spesifik CAPITAL GOODS PRODUCERS */
+				K
+				epsiloniK
+				iK
 
-			/* Variabel spesifik HOUSING GOODS PRODUCERS */
-			R
-			epsiloniR
-			iR
-			
-			/* Variabel spesifik BANK */
-			K_B
-			Pi_B
-			BG_B;
-			
+				/* Variabel spesifik HOUSING GOODS PRODUCERS */
+				R
+				epsiloniR
+				iR
+				
+				/* Variabel spesifik BANK */
+				K_B
+				Pi_B
+				BG_B;
+				
 
 			
 		
-parameters	xi				//Tingkat external habit formation
-			sigmaC			//Elastisitas intertemporal dari substitusi di konsumsi
-			sigmaR			//Elastisitas intertemporal dari substitusi di rumah
-			sigmaL			//Elastisitas dari bekerja
-			sigmaE
-			alphaTD
-			alphaTW
-			alphaTG
-			alphaTK
-			alphaTPi
-			alphaE
-			deltaR			//Tingkat depresiasi perumahan
-			deltaK			//Tingkat depresiasi kapital
-			deltaE
-			deltaB
-			w_B
-			epsilonw
-			epsilonW
-			kappaK
-			kappaKB
-			kappaR
-			kappaD
-			kappaE
-			kappaIR
-			kappaIC
-			omegaB
-			rbar
-			pibar
-			PhiR
-			Phipi
-			Phiy
-			nu
+parameters			xi			//Tingkat external habit formation
+				sigmaC			//Elastisitas intertemporal dari substitusi di konsumsi
+				sigmaR			//Elastisitas intertemporal dari substitusi di rumah
+				sigmaL			//Elastisitas dari bekerja
+				sigmaE
+				alphaTD
+				alphaTW
+				alphaTG
+				alphaTK
+				alphaTPi
+				alphaE
+				deltaR			//Tingkat depresiasi perumahan
+				deltaK			//Tingkat depresiasi kapital
+				deltaE
+				deltaB
+				w_B
+				epsilonw
+				epsilonW
+				kappaK
+				kappaKB
+				kappaR
+				kappaD
+				kappaE
+				kappaIR
+				kappaIC
+				omegaB
+				rbar
+				pibar
+				PhiR
+				Phipi
+				Phiy
+				nu
 
-			/* Parameter spesifik pada PATIENT HOUSEHOLD */	
-			betaP  			//Discount factor pada Patient Household
-			thetaWP			
-			thetaP
-			gamma_P
-			
-			/* Parameter spesifik pada IMPATIENT HOUSEHOLD */	
-			betaI			//Discount factor pada Impatient Household
-			thetaWI
-			thetaI
-			gamma_I
-			
-			/* Parameter spesifik pada ENTREPENEURS */	
-			betaE			//Discount factor pada Entrepreneurs
-			gamma_E
+				/* Parameter spesifik pada PATIENT HOUSEHOLD */	
+				betaP  			//Discount factor pada Patient Household
+				thetaWP			
+				thetaP
+				gamma_P
+				
+				/* Parameter spesifik pada IMPATIENT HOUSEHOLD */	
+				betaI			//Discount factor pada Impatient Household
+				thetaWI
+				thetaI
+				gamma_I
+				
+				/* Parameter spesifik pada ENTREPENEURS */	
+				betaE			//Discount factor pada Entrepreneurs
+				gamma_E
 
-			/* Parameter spesifik pada DOMESTIC RETAILERS */			
-			epsilonH
-			thetaH
-			
-			/* Parameter spesifik pada IMPORTIR RETAILERS */			
-			epsilonF
-			thetaF
+				/* Parameter spesifik pada DOMESTIC RETAILERS */			
+				epsilonH
+				thetaH
+				
+				/* Parameter spesifik pada IMPORTIR RETAILERS */			
+				epsilonF
+				thetaF
 
-			/* Parameter spesifik pada EXPORTING RETAILERS */			
-			epsilonHstar
-			thetaHstar
-			muHstar;
+				/* Parameter spesifik pada EXPORTING RETAILERS */			
+				epsilonHstar
+				thetaHstar
+				muHstar;
 
 
 model;
